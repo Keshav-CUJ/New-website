@@ -1,0 +1,134 @@
+/* Basic Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+.container {
+    width: 70%; /* Reduce the width of the container */
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Align logo & site name to right, links to left */
+    background-color: #fff;
+    color: #333;
+    padding: 10px 0;
+    width: 100%; /* Reduce the length of the navbar */
+}
+
+.logo {
+    width: 50px;
+    margin-right: 10px;
+}
+
+.site-name {
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    margin-left: 0; /* Align links to the left */
+    order: 1; /* Move nav links to the left side of the navbar */
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    color: #2E7D32;
+    text-decoration: none;
+    font-size: 16px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.nav-links a:hover {
+    transform: scale(1.1);
+}
+
+.nav-links a:active {
+    transform: scale(0.95);
+}
+
+/* Click animation */
+.nav-links a:focus {
+    animation: click-bounce 0.4s;
+}
+
+@keyframes click-bounce {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+    100% { transform: scale(1); }
+}
+
+/* Move logo and site name to the right */
+.navbar .container {
+    display: flex;
+    justify-content: flex-end; /* Align logo and name to the right */
+}
+
+.hero {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.hero h2, .hero p {
+    opacity: 0;
+    animation: pop-up 0.5s forwards;
+}
+
+.hero h2 {
+    font-size: 36px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    animation-delay: 0.5s;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #fff;
+    line-height: 1.5;
+    animation-delay: 0.8s;
+}
+
+.btn {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+/* Pop-up animation */
+@keyframes pop-up {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
